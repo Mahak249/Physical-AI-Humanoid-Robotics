@@ -1,0 +1,23 @@
+[project]
+name = "humanoid-robotics-backend"
+version = "0.1.0"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic-settings",
+    "sqlalchemy",
+    "psycopg2-binary",
+    "passlib[bcrypt]",
+    "python-jose[cryptography]",
+    "qdrant-client",
+]
+
+[tool.black]
+line-length = 100
+target-version = ['py311']
+
+[tool.isort]
+profile = "black"
+line_length = 100
+known_first_party = ["src"]
+skip_gitignore = true
